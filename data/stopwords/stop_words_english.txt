@@ -515,7 +515,6 @@ un
 under
 underneath
 undoing
-unfortunately
 unless
 unlike
 unlikely
@@ -783,7 +782,6 @@ state
 states
 strongly
 substantially
-successfully
 sufficiently
 suggest
 thered
