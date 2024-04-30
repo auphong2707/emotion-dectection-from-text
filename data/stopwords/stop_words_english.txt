@@ -10,7 +10,6 @@ adj
 after
 afterwards
 again
-against
 ago
 ahead
 ain't
@@ -18,7 +17,6 @@ all
 allow
 allows
 almost
-alone
 along
 alongside
 already
@@ -34,7 +32,6 @@ an
 and
 another
 any
-anybody
 anyhow
 anyone
 anything
@@ -43,8 +40,6 @@ anyways
 anywhere
 apart
 appear
-appreciate
-appropriate
 are
 aren't
 around
@@ -57,7 +52,6 @@ associated
 at
 available
 away
-awfully
 back
 backward
 backwards
@@ -73,23 +67,15 @@ beforehand
 begin
 behind
 being
-believe
 below
 beside
 besides
-best
-better
 between
-beyond
 both
 brief
 but
 by
 came
-can
-cannot
-cant
-can't
 caption
 cause
 causes
@@ -116,7 +102,6 @@ couldn't
 course
 c's
 currently
-dare
 daren't
 definitely
 described
@@ -131,8 +116,6 @@ doesn't
 doing
 done
 don't
-down
-downwards
 during
 each
 edu
@@ -173,7 +156,6 @@ followed
 following
 follows
 for
-forever
 former
 formerly
 forth
@@ -209,7 +191,6 @@ he
 he'd
 he'll
 hello
-help
 hence
 her
 here
@@ -226,7 +207,6 @@ him
 himself
 his
 hither
-hopefully
 how
 howbeit
 however
@@ -329,7 +309,6 @@ need
 needn't
 needs
 neither
-never
 neverf
 neverless
 nevertheless
@@ -367,7 +346,6 @@ ones
 one's
 only
 onto
-opposite
 or
 other
 others
@@ -384,7 +362,6 @@ overall
 own
 particular
 particularly
-past
 per
 perhaps
 placed
@@ -457,7 +434,6 @@ sometimes
 somewhat
 somewhere
 soon
-sorry
 specified
 specify
 specifying
@@ -523,7 +499,6 @@ thru
 thus
 till
 to
-together
 too
 took
 toward
@@ -540,7 +515,6 @@ un
 under
 underneath
 undoing
-unfortunately
 unless
 unlike
 unlikely
@@ -613,7 +587,6 @@ whose
 why
 will
 willing
-wish
 with
 within
 without
@@ -663,13 +636,11 @@ z
 I
 www
 amount
-bill
 bottom
 call
 computer
 con
 couldnt
-cry
 de
 describe
 detail
@@ -680,7 +651,6 @@ fifteen
 fifty
 fill
 find
-fire
 forty
 front
 full
@@ -688,7 +658,6 @@ give
 hasnt
 herse
 himse
-interest
 itse”
 mill
 move
@@ -783,7 +752,6 @@ present
 previously
 primarily
 promptly
-proud
 quickly
 ran
 readily
@@ -812,10 +780,8 @@ somethan
 specifically
 state
 states
-stop
 strongly
 substantially
-successfully
 sufficiently
 suggest
 thered
