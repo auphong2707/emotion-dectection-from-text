@@ -122,8 +122,7 @@ def load_processed_data(type_data: str):
 		)
 	elif type_data == "output":
 		return (
-			sparse.load_npz(directory + "y_train.npz"),
-			sparse.load_npz(directory + "y_test.npz"),
+			np.loadtxt(directory + "y_train.txt", dtype=str),
+			np.loadtxt(directory + "y_test.txt", dtype=str),
 		)
-
 
