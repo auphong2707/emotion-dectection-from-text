@@ -94,12 +94,13 @@ def draw_learning_curve(model, X_train, y_train, cv = 5, train_sizes = np.linspa
 	plt.plot(train_sizes, train_mean_score, color = 'g')
 	plt.plot(train_sizes, test_mean_score, color = 'r')
 
-def load_processed_data():
+def load_processed_data(type_data: str):
 	""" Return the preprocessed data in order: X_train_bow, X_test_bow, X_train_tfidf, X_test_tfidf, y_train, y_test
 	
 	Parameters
 	----------
-	None
+	type_data: String
+		Specify the type of the data you want to load: "input" for input datasets, "output" for output datasets
 	
 	Return
 	------
@@ -107,11 +108,22 @@ def load_processed_data():
 
 	"""
 	directory = "data/dataset/processed/"
-	return (
-		sparse.load_npz(directory + "X_train_bow.npz"),
-		sparse.load_npz(directory + "X_test_bow.npz"),
-		sparse.load_npz(directory + "X_train_tfidf.npz"),
-		sparse.load_npz(directory + "X_test_tfidf.npz"),
-		np.loadtxt(directory + "y_train.txt", dtype='str'),
-		np.loadtxt(directory + "y_test.txt", dtype='str')
-	)
+	if type_data == "input":
+		return (
+			sparse.load_npz(directory + "X_train_bow.npz"),
+			sparse.load_npz(directory + "X_test_bow.npz"),
+			sparse.load_npz(directory + "X_train_tfidf.npz"),
+			sparse.load_npz(directory + "X_test_tfidf.npz"),
+
+			sparse.load_npz(directory + "X_train_bow_L1.npz"),
+			sparse.load_npz(directory + "X_test_bow_L1.npz"),
+			sparse.load_npz(directory + "X_train_tfidf_L1.npz"),
+			sparse.load_npz(directory + "X_test_tfidf_L1.npz"),
+		)
+	elif type_data == "output":
+		return (
+			sparse.load_npz(directory + "y_train.npz"),
+			sparse.load_npz(directory + "y_test.npz"),
+		)
+
+
