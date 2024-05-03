@@ -29,9 +29,9 @@ def evaluate_model(model, X_train, X_test, y_train, y_test, include_training = F
 
 		# Calculate score
 		print("Score of on train are:")
-		print("\t- Accuracy score: {:.2f}".format(accuracy_score(y_pred, y_train)))
-		print("\t- Micro F1 score: {:.2f}".format(f1_score(y_pred, y_train, average = 'micro')))
-		print("\t- Macro F1 score: {:.2f}".format(f1_score(y_pred, y_train, average = 'macro')))
+		print("\t- Accuracy score: {:.4f}".format(accuracy_score(y_pred, y_train)))
+		print("\t- Micro F1 score: {:.4f}".format(f1_score(y_pred, y_train, average = 'micro')))
+		print("\t- Macro F1 score: {:.4f}".format(f1_score(y_pred, y_train, average = 'macro')))
 		
 		# Draw confusion matrix
 		cm = confusion_matrix(y_pred, y_train)
@@ -45,9 +45,9 @@ def evaluate_model(model, X_train, X_test, y_train, y_test, include_training = F
 
 	# Calculate score
 	print("Score of on test are:")
-	print("\t- Accuracy score: {:.2f}".format(accuracy_score(y_pred, y_test)))
-	print("\t- Micro F1 score: {:.2f}".format(f1_score(y_pred, y_test, average = 'micro')))
-	print("\t- Macro F1 score: {:.2f}".format(f1_score(y_pred, y_test, average = 'macro')))
+	print("\t- Accuracy score: {:.4f}".format(accuracy_score(y_pred, y_test)))
+	print("\t- Micro F1 score: {:.4f}".format(f1_score(y_pred, y_test, average = 'micro')))
+	print("\t- Macro F1 score: {:.4f}".format(f1_score(y_pred, y_test, average = 'macro')))
 
 	# Draw confusion matrix
 	cm = confusion_matrix(y_pred, y_test)
