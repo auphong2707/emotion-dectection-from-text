@@ -29,9 +29,9 @@ def evaluate_model(model, X_train, X_test, y_train, y_test, include_training = F
 
 		# Calculate score
 		print("Score of on train are:")
-		print("\t- Accuracy score: {:.2f}".format(accuracy_score(y_pred, y_train)))
-		print("\t- Micro F1 score: {:.2f}".format(f1_score(y_pred, y_train, average = 'micro')))
-		print("\t- Macro F1 score: {:.2f}".format(f1_score(y_pred, y_train, average = 'macro')))
+		print("\t- Accuracy score: {:.4f}".format(accuracy_score(y_pred, y_train)))
+		print("\t- Micro F1 score: {:.4f}".format(f1_score(y_pred, y_train, average = 'micro')))
+		print("\t- Macro F1 score: {:.4f}".format(f1_score(y_pred, y_train, average = 'macro')))
 		
 		# Draw confusion matrix
 		cm = confusion_matrix(y_pred, y_train)
@@ -45,9 +45,9 @@ def evaluate_model(model, X_train, X_test, y_train, y_test, include_training = F
 
 	# Calculate score
 	print("Score of on test are:")
-	print("\t- Accuracy score: {:.2f}".format(accuracy_score(y_pred, y_test)))
-	print("\t- Micro F1 score: {:.2f}".format(f1_score(y_pred, y_test, average = 'micro')))
-	print("\t- Macro F1 score: {:.2f}".format(f1_score(y_pred, y_test, average = 'macro')))
+	print("\t- Accuracy score: {:.4f}".format(accuracy_score(y_pred, y_test)))
+	print("\t- Micro F1 score: {:.4f}".format(f1_score(y_pred, y_test, average = 'micro')))
+	print("\t- Macro F1 score: {:.4f}".format(f1_score(y_pred, y_test, average = 'macro')))
 
 	# Draw confusion matrix
 	cm = confusion_matrix(y_pred, y_test)
@@ -94,12 +94,13 @@ def draw_learning_curve(model, X_train, y_train, cv = 5, train_sizes = np.linspa
 	plt.plot(train_sizes, train_mean_score, color = 'g')
 	plt.plot(train_sizes, test_mean_score, color = 'r')
 
-def load_processed_data():
+def load_processed_data(type_data: str):
 	""" Return the preprocessed data in order: X_train_bow, X_test_bow, X_train_tfidf, X_test_tfidf, y_train, y_test
 	
 	Parameters
 	----------
-	None
+	type_data: String
+		Specify the type of the data you want to load: "input" for input datasets, "output" for output datasets
 	
 	Return
 	------
@@ -107,11 +108,21 @@ def load_processed_data():
 
 	"""
 	directory = "data/dataset/processed/"
-	return (
-		sparse.load_npz(directory + "X_train_bow.npz"),
-		sparse.load_npz(directory + "X_test_bow.npz"),
-		sparse.load_npz(directory + "X_train_tfidf.npz"),
-		sparse.load_npz(directory + "X_test_tfidf.npz"),
-		np.loadtxt(directory + "y_train.txt", dtype='str'),
-		np.loadtxt(directory + "y_test.txt", dtype='str')
-	)
+	if type_data == "input":
+		return (
+			sparse.load_npz(directory + "X_train_bow.npz"),
+			sparse.load_npz(directory + "X_test_bow.npz"),
+			sparse.load_npz(directory + "X_train_tfidf.npz"),
+			sparse.load_npz(directory + "X_test_tfidf.npz"),
+
+			sparse.load_npz(directory + "X_train_bow_L1.npz"),
+			sparse.load_npz(directory + "X_test_bow_L1.npz"),
+			sparse.load_npz(directory + "X_train_tfidf_L1.npz"),
+			sparse.load_npz(directory + "X_test_tfidf_L1.npz"),
+		)
+	elif type_data == "output":
+		return (
+			np.loadtxt(directory + "y_train.txt", dtype=str),
+			np.loadtxt(directory + "y_test.txt", dtype=str),
+		)
+
