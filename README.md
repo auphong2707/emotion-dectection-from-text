@@ -59,8 +59,7 @@ We create an user interface for anyone want to take a test to our models.
 First, you need to run all the code cells in *Export Model.ipynb* in order to get all of our models. This process may takes about 30 minutes.
 ```bash
 pip install -r requirement.txt
-jupyter nbconvert --to script ExportModels.ipynb
-python ExportModels.py
+papermill ExportModels.ipynb ExportModels.ipynb
 ```
 
 Then, you can open our UI by running the *UI.py* using command
