@@ -57,8 +57,13 @@ Initially, due to the size of the pipelines, there are no exported models includ
 We create an user interface for anyone want to take a test to our models.
 
 First, you need to run all the code cells in *Export Model.ipynb* in order to get all of our models. This process may takes about 30 minutes.
+```bash
+pip install -r requirement.txt
+jupyter nbconvert --to script ExportModels.ipynb
+python ExportModels.py
+```
 
-Then, you can open our UI by open the folder by run the *UI.py* using command
+Then, you can open our UI by running the *UI.py* using command
 ```bash
 python UI.py
 ```
