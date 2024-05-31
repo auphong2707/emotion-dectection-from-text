@@ -19,6 +19,14 @@ Our team developed a workflow to streamline the project process. Below is our wo
 
 
 # Notebook
+
+**For testing purpose, you can rerun our notebooks as following order**
+
+Before testing, please remember to install requirements by using this command
+```bash
+pip install -r requirement.txt
+```
+
 ## Data Preprocess
 The notebook we use to preprocess the data is *DataPreprocess.ipynb*. This notebook demonstrates our preprocessing steps using the **sklearn** module. 
 
@@ -38,7 +46,7 @@ To perform this task in parallel, we created separate branches and notebooks for
   * *Random Forest.ipynb*
   * *Softmax regression.ipynb*
 
-After tuning a model, we export a tuning report that includes the optimized hyperparameters, which will be used in the final report and model export phases.
+After tuning a model by using a dataset, we export a tuning report that includes the optimized hyperparameters, which will be used in the final report and model export phases. **Then, we will use that notebook for tuning next type of preprocessing method**.
 
 For a detailed explanation, please refer to the notebook and the reports in */data/tuning-reports*.
 
@@ -51,18 +59,11 @@ The test dataset is sourced from the Google Research blog: [Practical Test datas
 
 The notebook *Export Model.ipynb* used to export all the trained model pipeline. This process involves gathering all the tuned hyperparameters, retraining the models, and then exporting the pipelines to the */data/models* directory.
 
-Initially, due to the size of the pipelines, there are no exported models included.
-
 # User Interface
+
 We create an user interface for anyone want to take a test to our models.
 
-First, you need to run all the code cells in *Export Model.ipynb* in order to get all of our models. This process may takes about 30 minutes.
-```bash
-pip install -r requirement.txt
-papermill ExportModels.ipynb ExportModels.ipynb
-```
-
-Then, you can open our UI by running the *UI.py* using command
+You can open our UI by running the *UI.py* using command
 ```bash
 python UI.py
 ```
